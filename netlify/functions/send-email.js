@@ -3,7 +3,7 @@ const LOGO_B64 = 'data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BS
 
 function buildEmailHtml(payload, forClient) {
   const header = `
-    <div style="background:#1a1a1a;padding:20px 28px;text-align:center;">
+    <div style="background:#ffffff;padding:20px 28px;text-align:center;border-bottom:1px solid #e0d5c0;">
       <img src="${LOGO_B64}" alt="Finanční Frajer" style="height:50px;width:auto;" />
     </div>`;
 
