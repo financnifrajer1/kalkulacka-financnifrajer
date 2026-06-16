@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalkulačka životního pojištění | Finanční Frajer</title>
-<meta name="description" content="Zjistěte orientační cenu životního pojištění za 2 minuty – bez zadávání osobních údajů.">
-<meta property="og:title" content="Kalkulačka životního pojištění | Finanční Frajer">
-<meta property="og:description" content="Zjistěte orientační cenu životního pojištění za 2 minuty – bez zadávání osobních údajů.">
+<title>Kalkulačka rodinného pojištění | Finanční Frajer</title>
+<meta name="description" content="Zjistěte orientační cenu rodinného pojištění za 2 minuty – bez zadávání osobních údajů.">
+<meta property="og:title" content="Kalkulačka rodinného pojištění | Finanční Frajer">
+<meta property="og:description" content="Zjistěte orientační cenu rodinného pojištění za 2 minuty – bez zadávání osobních údajů.">
 <meta property="og:url" content="https://kalkulacka.financnifrajer.cz">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Google Analytics GA4 -->
@@ -232,90 +232,95 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
 
   <header class="header">
     <a href="https://financnifrajer.cz" style="display:inline-block;line-height:0;"><img src="data:image/png;base64,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" alt="Finanční Frajer" style="height:48px;width:auto;display:block;" /></a>
-    <div class="header-note" id="headerNote">Kalkulačka životního pojištění</div>
+    <div class="header-note" id="headerNote">Kalkulačka rodinného pojištění</div>
   </header>
 
   <main class="main">
 
     <!-- INTRO -->
 
-    <!-- Q1: VĚK -->
-    <div class="screen active" id="screen-1">
+    <!-- Q1: ÚČEL POJIŠTĚNÍ (informativní) -->
+    <div class="screen" id="screen-1">
+      <div class="step-dots" id="dots-1"></div>
+      <div class="q-step">Otázka 1 z 10</div>
+      <h2 class="q-title">Na co chcete pojištění primárně použít?</h2>
+      <p class="q-sub">Pomůže nám to lépe pochopit vaše priority při konzultaci.</p>
+      <div class="options">
+        <div class="option" onclick="select(1,'ucel','komplexni')">
+          <span class="option-icon">🛡️</span>
+          <div class="option-label">Komplexní ochrana mě a rodiny</div>
+          <div class="option-desc">Chci mít pokryté všechna hlavní rizika – smrt, invaliditu, nemoc i úraz</div>
+        </div>
+        <div class="option" onclick="select(1,'ucel','zavazna')">
+          <span class="option-icon">❤️</span>
+          <div class="option-label">Závažná rizika</div>
+          <div class="option-desc">Hlavně krytí vážných onemocnění, invalidity a smrti</div>
+        </div>
+        <div class="option" onclick="select(1,'ucel','bolestne')">
+          <span class="option-icon">🩹</span>
+          <div class="option-label">Bolestné / pracovní neschopnost</div>
+          <div class="option-desc">Náhrada příjmu při nemoci nebo úrazu</div>
+        </div>
+      </div>
+      <div class="nav">
+        <button class="back-btn" onclick="goBack(1)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg> Zpět</button>
+        <button class="btn btn-gold next-btn" onclick="showResults()" disabled id="next-1">Zobrazit výsledek <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- Q2: VĚK -->
+    <div class="screen active" id="screen-2">
       <div style="text-align:center;margin-bottom:24px;">
-        <div style="font-family:'Inter',sans-serif;font-size:clamp(28px,6vw,42px);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:18px;">Kalkulačka pojištění<br><span style="color:var(--gold);">pro táty</span></div>
+        <div style="font-family:'Inter',sans-serif;font-size:clamp(28px,6vw,42px);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:18px;">Kalkulačka pojištění<br><span style="color:var(--gold);">pro rodinu</span></div>
         <div style="display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;">
           <span style="display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(201,168,76,0.35);border-radius:100px;padding:8px 20px;font-size:15px;font-weight:600;color:var(--gold-light);">📋 10 otázek</span>
           <span style="display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(201,168,76,0.35);border-radius:100px;padding:8px 20px;font-size:15px;font-weight:600;color:var(--gold-light);">⏱ do 2 minut</span>
         </div>
       </div>
-      <div class="step-dots" id="dots-1"></div>
-      <h2 class="q-title">Kolik vám je let?</h2>
-      <p class="q-sub">Pár otázek a ukážeme vám, co by pojistka reálně kryla – v konkrétních číslech.</p>
+      <div class="step-dots" id="dots-2"></div>
+      <h2 class="q-title">Kolik je let hlavnímu živiteli rodiny?</h2>
+      <p class="q-sub">Nastavíme ochranu na míru vaší rodině – v konkrétních číslech.</p>
       <div class="options cols-2">
-        <div class="option" onclick="select(1,'age','20')">
+        <div class="option" onclick="select(2,'age','20')">
           <span class="option-icon">🌱</span>
           <div class="option-label">18 – 29 let</div>
         </div>
-        <div class="option" onclick="select(1,'age','30')">
+        <div class="option" onclick="select(2,'age','30')">
           <span class="option-icon">💼</span>
           <div class="option-label">30 – 39 let</div>
         </div>
-        <div class="option" onclick="select(1,'age','40')">
+        <div class="option" onclick="select(2,'age','40')">
           <span class="option-icon">🏠</span>
           <div class="option-label">40 – 49 let</div>
         </div>
-        <div class="option" onclick="select(1,'age','50')">
+        <div class="option" onclick="select(2,'age','50')">
           <span class="option-icon">🎯</span>
           <div class="option-label">50 let a více</div>
         </div>
       </div>
       <div class="nav">
-        <button class="btn btn-gold next-btn" onclick="next(1)" disabled id="next-1">Další <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
-      </div>
-    </div>
-
-    <!-- Q2: PŘÍJEM -->
-    <div class="screen" id="screen-2">
-      <div class="step-dots" id="dots-2"></div>
-      <div class="q-step">Otázka 2 z 10</div>
-      <h2 class="q-title">Jaký je váš průměrný čistý příjem?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Příjem určuje výši pojistných částek – pojistka chrání váš životní standard.</div></div>
-      <div class="options cols-2">
-        <div class="option" onclick="select(2,'income','20-34')">
-          <div class="option-label">20 000 – 34 000 Kč</div>
-        </div>
-        <div class="option" onclick="select(2,'income','35-50')">
-          <div class="option-label">35 000 – 50 000 Kč</div>
-        </div>
-        <div class="option" onclick="select(2,'income','50-75')">
-          <div class="option-label">50 000 – 75 000 Kč</div>
-        </div>
-        <div class="option" onclick="select(2,'income','75+')">
-          <div class="option-label">75 000 Kč a více</div>
-        </div>
-      </div>
-      <div class="nav">
-        <button class="back-btn" onclick="goBack(2)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg> Zpět</button>
         <button class="btn btn-gold next-btn" onclick="next(2)" disabled id="next-2">Další <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
       </div>
     </div>
 
-    <!-- Q3: ZAMĚSTNÁNÍ -->
+    <!-- Q3: PŘÍJEM -->
     <div class="screen" id="screen-3">
       <div class="step-dots" id="dots-3"></div>
       <div class="q-step">Otázka 3 z 10</div>
-      <h2 class="q-title">Jste zaměstnanec, nebo OSVČ?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">OSVČ jsou více ohroženi výpadkem příjmu – pojistka musí krýt víc.</div></div>
+      <h2 class="q-title">Jaký je průměrný čistý příjem hlavního živitele?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Příjem určuje výši pojistných částek – pojistka chrání váš životní standard.</div></div>
       <div class="options cols-2">
-        <div class="option" onclick="select(3,'employment','zamestnanec')">
-          <span class="option-icon">🏢</span>
-          <div class="option-label">Zaměstnanec</div>
-          <div class="option-desc">Pracuji na HPP nebo DPP</div>
+        <div class="option" onclick="select(3,'income','20-34')">
+          <div class="option-label">20 000 – 34 000 Kč</div>
         </div>
-        <div class="option" onclick="select(3,'employment','osvc')">
-          <span class="option-icon">🔧</span>
-          <div class="option-label">OSVČ / podnikatel</div>
-          <div class="option-desc">Živnostenský list, s.r.o.</div>
+        <div class="option" onclick="select(3,'income','35-50')">
+          <div class="option-label">35 000 – 50 000 Kč</div>
+        </div>
+        <div class="option" onclick="select(3,'income','50-75')">
+          <div class="option-label">50 000 – 75 000 Kč</div>
+        </div>
+        <div class="option" onclick="select(3,'income','75+')">
+          <div class="option-label">75 000 Kč a více</div>
         </div>
       </div>
       <div class="nav">
@@ -324,22 +329,22 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
     </div>
 
-    <!-- Q4: TYP PRÁCE -->
+    <!-- Q4: ZAMĚSTNÁNÍ -->
     <div class="screen" id="screen-4">
       <div class="step-dots" id="dots-4"></div>
       <div class="q-step">Otázka 4 z 10</div>
-      <h2 class="q-title">Pracujete fyzicky, nebo u počítače?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Fyzická práce nese vyšší riziko úrazu a pracovní neschopnosti.</div></div>
+      <h2 class="q-title">Hlavní živitel je zaměstnanec, nebo OSVČ?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">OSVČ jsou více ohroženi výpadkem příjmu – pojistka musí krýt víc.</div></div>
       <div class="options cols-2">
-        <div class="option" onclick="select(4,'workType','kancelar')">
-          <span class="option-icon">💻</span>
-          <div class="option-label">Kancelář / duševní práce</div>
-          <div class="option-desc">Administrativní práce, management, IT</div>
+        <div class="option" onclick="select(4,'employment','zamestnanec')">
+          <span class="option-icon">🏢</span>
+          <div class="option-label">Zaměstnanec</div>
+          <div class="option-desc">Pracuji na HPP nebo DPP</div>
         </div>
-        <div class="option" onclick="select(4,'workType','manualni')">
-          <span class="option-icon">🪖</span>
-          <div class="option-label">Manuální / fyzická práce</div>
-          <div class="option-desc">Řemeslník, řidič, zdravotník, dělník</div>
+        <div class="option" onclick="select(4,'employment','osvc')">
+          <span class="option-icon">🔧</span>
+          <div class="option-label">OSVČ / podnikatel</div>
+          <div class="option-desc">Živnostenský list, s.r.o.</div>
         </div>
       </div>
       <div class="nav">
@@ -348,31 +353,22 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
     </div>
 
-    <!-- Q5: ÚVĚR -->
+    <!-- Q5: TYP PRÁCE -->
     <div class="screen" id="screen-5">
       <div class="step-dots" id="dots-5"></div>
       <div class="q-step">Otázka 5 z 10</div>
-      <h2 class="q-title">Máte nějaký úvěr?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Hypotéka nebo velký úvěr = rodina by po vás zdědila dluh. Pojistka to kryje.</div></div>
-      <div class="options">
-        <div class="option" onclick="select(5,'loan','zadny')">
-          <div class="option-label">Žádný úvěr</div>
+      <h2 class="q-title">Jaký typ práce hlavní živitel vykonává?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Fyzická práce nese vyšší riziko úrazu a pracovní neschopnosti.</div></div>
+      <div class="options cols-2">
+        <div class="option" onclick="select(5,'workType','kancelar')">
+          <span class="option-icon">💻</span>
+          <div class="option-label">Kancelář / duševní práce</div>
+          <div class="option-desc">Administrativní práce, management, IT</div>
         </div>
-        <div class="option" onclick="select(5,'loan','do1M')">
-          <div class="option-label">Do 1 000 000 Kč</div>
-          <div class="option-desc">Menší spotřebitelský nebo osobní úvěr</div>
-        </div>
-        <div class="option" onclick="select(5,'loan','1-3M')">
-          <div class="option-label">1 000 000 – 3 000 000 Kč</div>
-          <div class="option-desc">Menší hypotéka nebo kombinace úvěrů</div>
-        </div>
-        <div class="option" onclick="select(5,'loan','3-5M')">
-          <div class="option-label">3 000 000 – 5 000 000 Kč</div>
-          <div class="option-desc">Standardní hypotéka</div>
-        </div>
-        <div class="option" onclick="select(5,'loan','5M+')">
-          <div class="option-label">5 000 000 Kč a více</div>
-          <div class="option-desc">Větší hypotéka nebo více úvěrů</div>
+        <div class="option" onclick="select(5,'workType','manualni')">
+          <span class="option-icon">🪖</span>
+          <div class="option-label">Manuální / fyzická práce</div>
+          <div class="option-desc">Řemeslník, řidič, zdravotník, dělník</div>
         </div>
       </div>
       <div class="nav">
@@ -381,24 +377,31 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
     </div>
 
-    <!-- Q6: REZERVY -->
+    <!-- Q6: ÚVĚR -->
     <div class="screen" id="screen-6">
       <div class="step-dots" id="dots-6"></div>
       <div class="q-step">Otázka 6 z 10</div>
-      <h2 class="q-title">Jak vysoké máte finanční rezervy?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Kdo má finanční polštář, nemusí dávat veškerou zodpovědnost na pojistku.</div></div>
+      <h2 class="q-title">Má rodina nějaký úvěr nebo hypotéku?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Hypotéka nebo velký úvěr = rodina by po vás zdědila dluh. Pojistka to kryje.</div></div>
       <div class="options">
-        <div class="option" onclick="select(6,'reserves','do2')">
-          <div class="option-label">Do 2 měsíčních příjmů</div>
-          <div class="option-desc">Málo rezerv – neschopnost by mě rychle dostihla</div>
+        <div class="option" onclick="select(6,'loan','zadny')">
+          <div class="option-label">Žádný úvěr</div>
         </div>
-        <div class="option" onclick="select(6,'reserves','2-4')">
-          <div class="option-label">2 – 4 měsíční příjmy</div>
-          <div class="option-desc">Střední polštář – pár měsíců bych vydržel</div>
+        <div class="option" onclick="select(6,'loan','do1M')">
+          <div class="option-label">Do 1 000 000 Kč</div>
+          <div class="option-desc">Menší spotřebitelský nebo osobní úvěr</div>
         </div>
-        <div class="option" onclick="select(6,'reserves','5+')">
-          <div class="option-label">5 a více měsíčních příjmů</div>
-          <div class="option-desc">Krátkodobý výpadek příjmů zvládnu</div>
+        <div class="option" onclick="select(6,'loan','1-3M')">
+          <div class="option-label">1 000 000 – 3 000 000 Kč</div>
+          <div class="option-desc">Menší hypotéka nebo kombinace úvěrů</div>
+        </div>
+        <div class="option" onclick="select(6,'loan','3-5M')">
+          <div class="option-label">3 000 000 – 5 000 000 Kč</div>
+          <div class="option-desc">Standardní hypotéka</div>
+        </div>
+        <div class="option" onclick="select(6,'loan','5M+')">
+          <div class="option-label">5 000 000 Kč a více</div>
+          <div class="option-desc">Větší hypotéka nebo více úvěrů</div>
         </div>
       </div>
       <div class="nav">
@@ -407,28 +410,24 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
     </div>
 
-    <!-- Q7: DĚTI -->
+    <!-- Q7: REZERVY -->
     <div class="screen" id="screen-7">
       <div class="step-dots" id="dots-7"></div>
       <div class="q-step">Otázka 7 z 10</div>
-      <h2 class="q-title">Kolik dětí chcete zahrnout do pojistky?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Dítě – naše největší radost, ale také starost. Automaticky pojistíme na nejvyšší limity velkých rizik, nemocí i úrazem.</div></div>
-      <div class="options cols-2">
-        <div class="option" onclick="select(7,'children','0')">
-          <span class="option-icon">—</span>
-          <div class="option-label">Žádné dítě</div>
+      <h2 class="q-title">Jak vysoké má rodina finanční rezervy?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Kdo má finanční polštář, nemusí dávat veškerou zodpovědnost na pojistku.</div></div>
+      <div class="options">
+        <div class="option" onclick="select(7,'reserves','do2')">
+          <div class="option-label">Do 2 měsíčních příjmů rodiny</div>
+          <div class="option-desc">Málo rezerv – neschopnost by mě rychle dostihla</div>
         </div>
-        <div class="option" onclick="select(7,'children','1')">
-          <span class="option-icon">👶</span>
-          <div class="option-label">1 dítě</div>
+        <div class="option" onclick="select(7,'reserves','2-4')">
+          <div class="option-label">2 – 4 měsíční příjmy rodiny</div>
+          <div class="option-desc">Střední polštář – pár měsíců bych vydržel</div>
         </div>
-        <div class="option" onclick="select(7,'children','2')">
-          <span class="option-icon">👨‍👩‍👦</span>
-          <div class="option-label">2 děti</div>
-        </div>
-        <div class="option" onclick="select(7,'children','3')">
-          <span class="option-icon">👨‍👩‍👧‍👦</span>
-          <div class="option-label">3 a více</div>
+        <div class="option" onclick="select(7,'reserves','5+')">
+          <div class="option-label">5 a více měsíčních příjmů rodiny</div>
+          <div class="option-desc">Krátkodobý výpadek příjmů zvládnu</div>
         </div>
       </div>
       <div class="nav">
@@ -437,26 +436,28 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
     </div>
 
-    <!-- Q8: PARTNER -->
+    <!-- Q8: DĚTI -->
     <div class="screen" id="screen-8">
       <div class="step-dots" id="dots-8"></div>
       <div class="q-step">Otázka 8 z 10</div>
-      <h2 class="q-title">Chcete do pojistky zahrnout i partnera?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Krytí partnera v rámci jedné smlouvy je výrazně levnější než dvě samostatné.</div></div>
-      <div class="options">
-        <div class="option" onclick="select(8,'partner','ne')">
-          <span class="option-icon">🙋</span>
-          <div class="option-label">Ne, jen já</div>
+      <h2 class="q-title">Kolik dětí chcete do rodinné pojistky zahrnout?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Dítě – naše největší radost, ale také starost. Automaticky pojistíme na nejvyšší limity velkých rizik, nemocí i úrazem.</div></div>
+      <div class="options cols-2">
+        <div class="option" onclick="select(8,'children','0')">
+          <span class="option-icon">—</span>
+          <div class="option-label">Zatím bez dětí</div>
         </div>
-        <div class="option" onclick="select(8,'partner','pracujici')">
-          <span class="option-icon">👫</span>
-          <div class="option-label">Ano – pracující partner/partnerka</div>
-          <div class="option-desc">Partner má příjem – standardní přidružené pojištění</div>
+        <div class="option" onclick="select(8,'children','1')">
+          <span class="option-icon">👶</span>
+          <div class="option-label">1 dítě</div>
         </div>
-        <div class="option" onclick="select(8,'partner','nezamestnany')">
-          <span class="option-icon">🏡</span>
-          <div class="option-label">Ano – partner/partnerka v domácnosti</div>
-          <div class="option-desc">Nepracující partner – nižší sazba</div>
+        <div class="option" onclick="select(8,'children','2')">
+          <span class="option-icon">👨‍👩‍👦</span>
+          <div class="option-label">2 děti</div>
+        </div>
+        <div class="option" onclick="select(8,'children','3')">
+          <span class="option-icon">👨‍👩‍👧‍👦</span>
+          <div class="option-label">3 a více</div>
         </div>
       </div>
       <div class="nav">
@@ -465,26 +466,26 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
     </div>
 
-    <!-- Q9: ZDRAVÍ -->
+    <!-- Q9: PARTNER -->
     <div class="screen" id="screen-9">
       <div class="step-dots" id="dots-9"></div>
       <div class="q-step">Otázka 9 z 10</div>
-      <h2 class="q-title">Mohlo by zhoršení zdraví ukončit vaše zaměstnání nebo podnikání?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Řidiči, dělníci nebo lékaři – pokud přijdou o zdraví, přijdou i o práci. Kancelářský pracovník ne vždy.</div></div>
+      <h2 class="q-title">Chcete zahrnout i partnera/partnerku?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Krytí partnera v rámci jedné smlouvy je výrazně levnější než dvě samostatné.</div></div>
       <div class="options">
-        <div class="option" onclick="select(9,'health','ano')">
-          <span class="option-icon">⚠️</span>
-          <div class="option-label">Ano, přišel/přišla bych o místo</div>
-          <div class="option-desc">Moje práce vyžaduje plné zdraví – s invaliditou bych musel hledat znovu</div>
+        <div class="option" onclick="select(9,'partner','ne')">
+          <span class="option-icon">🙋</span>
+          <div class="option-label">Ne, jen hlavní živitel</div>
         </div>
-        <div class="option" onclick="select(9,'health','nevim')">
-          <span class="option-icon">🤔</span>
-          <div class="option-label">Nevím, asi záleží na situaci</div>
+        <div class="option" onclick="select(9,'partner','pracujici')">
+          <span class="option-icon">👫</span>
+          <div class="option-label">Ano – pracující partner/partnerka</div>
+          <div class="option-desc">Partner má příjem – standardní přidružené pojištění</div>
         </div>
-        <div class="option" onclick="select(9,'health','ne')">
-          <span class="option-icon">✅</span>
-          <div class="option-label">Ne, mohl/mohla bych pokračovat</div>
-          <div class="option-desc">Nemusí tomu tak být vždy – dalo by se přizpůsobit</div>
+        <div class="option" onclick="select(9,'partner','nezamestnany')">
+          <span class="option-icon">🏡</span>
+          <div class="option-label">Ano – partner/partnerka v domácnosti</div>
+          <div class="option-desc">Nepracující partner – nižší sazba</div>
         </div>
       </div>
       <div class="nav">
@@ -493,27 +494,31 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
     </div>
 
-    <!-- Q10: RODINA -->
+    <!-- Q10: ZDRAVÍ -->
     <div class="screen" id="screen-10">
       <div class="step-dots" id="dots-10"></div>
       <div class="q-step">Otázka 10 z 10</div>
-      <h2 class="q-title">Můžete se spolehnout na rodiče nebo širší rodinu?</h2>
-      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Silná rodinná záchranná síť snižuje potřebu vysokého krytí – a cenu pojistky.</div></div>
-      <div class="options cols-2">
-        <div class="option" onclick="select(10,'family','ano')">
-          <span class="option-icon">🤝</span>
-          <div class="option-label">Ano, mám podporu</div>
-          <div class="option-desc">Rodina by pomohla v krizi</div>
+      <h2 class="q-title">Mohlo by zhoršení zdraví živitele ohrozit příjmy celé rodiny?</h2>
+      <div class="q-hint-wrap"><button class="q-hint-btn" onclick="toggleHint(this)"><span class="hint-icon">?</span> Proč se ptáme</button><div class="q-hint-text">Řidiči, dělníci nebo lékaři – pokud přijdou o zdraví, přijdou i o práci. Kancelářský pracovník ne vždy.</div></div>
+      <div class="options">
+        <div class="option" onclick="select(10,'health','ano')">
+          <span class="option-icon">⚠️</span>
+          <div class="option-label">Ano, rodina by přišla o příjem</div>
+          <div class="option-desc">Práce vyžaduje plné zdraví – s invaliditou by se musel hledat nový zdroj příjmů</div>
         </div>
-        <div class="option" onclick="select(10,'family','ne')">
-          <span class="option-icon">🧭</span>
-          <div class="option-label">Ne, jsem na to sám/sama</div>
-          <div class="option-desc">Nemám koho požádat o pomoc</div>
+        <div class="option" onclick="select(10,'health','nevim')">
+          <span class="option-icon">🤔</span>
+          <div class="option-label">Nevím, asi záleží na situaci</div>
+        </div>
+        <div class="option" onclick="select(10,'health','ne')">
+          <span class="option-icon">✅</span>
+          <div class="option-label">Ne, rodina by to zvládla</div>
+          <div class="option-desc">Práci lze přizpůsobit nebo přesunout na partnera</div>
         </div>
       </div>
       <div class="nav">
         <button class="back-btn" onclick="goBack(10)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg> Zpět</button>
-        <button class="btn btn-gold next-btn" onclick="showResults()" disabled id="next-10">Zobrazit výsledek <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
+        <button class="btn btn-gold next-btn" onclick="next(10)" disabled id="next-10">Další <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
       </div>
     </div>
 
@@ -521,7 +526,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
     <div class="screen" id="screen-results" style="max-width:700px;">
       <div class="results-header">
         <div class="q-step">Váš výsledek</div>
-        <h2 class="results-title">Orientační pojistná ochrana</h2>
+        <h2 class="results-title">Orientační rodinná pojistná ochrana</h2>
         <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0 4px;">
           <div class="main-price-wrap" onclick="openModal()">
             <div class="total-price" id="totalPrice" style="display:inline-flex;align-items:baseline;gap:6px;min-height:110px;padding:22px 32px;"><span class="price-blurred" id="totalPriceNum">–</span><span id="totalPriceKc" style="opacity:0;">Kč</span></div>
@@ -593,7 +598,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
             
           </div>
           <div class="form-group" style="margin-top:4px;">
-            <label>Email <span style="color:var(--gold);font-size:12px;">*povinné</span></label>
+            <label>Email *</label>
             <input type="email" id="formEmail" autocomplete="email" placeholder="jan@email.cz">
           </div>
           
@@ -641,7 +646,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
           
         </div>
         <div class="form-group" style="margin-top:12px;">
-          <label>Email <span style="color:var(--gold);font-size:12px;">*povinné</span></label>
+          <label>Email *</label>
           <input type="email" id="modalEmail" autocomplete="email" placeholder="jan@email.cz">
         </div>
         <button class="btn btn-gold btn-full" style="margin-top:16px;" onclick="sendModal()">
@@ -736,7 +741,7 @@ function updateProgress(step) {
   }
   const note = document.getElementById('headerNote');
   if (typeof step === 'number') note.textContent = `Krok ${step} z ${TOTAL_STEPS}`;
-  else note.textContent = 'Kalkulačka životního pojištění';
+  else note.textContent = 'Kalkulačka rodinného pojištění';
 }
 
 function updateDots(step) {
@@ -869,7 +874,7 @@ function next(step) {
 }
 
 function getKeyForStep(step) {
-  const keys = ['','age','income','employment','workType','loan','reserves','children','partner','health','family'];
+  const keys = ['','ucel','age','income','employment','workType','loan','reserves','children','partner','health'];
   return keys[step];
 }
 
@@ -900,7 +905,7 @@ function select(step, key, value) {
 // CALCULATION
 // ============================================================
 function calculate() {
-  const { age, income, employment, workType, loan, reserves, children, partner, health, family } = answers;
+  const { age, income, employment, workType, loan, reserves, children, partner, health } = answers;
   const base = BASE_TABLE[age][income];
   const coeff = COEFF[age];
 
@@ -922,7 +927,7 @@ function calculate() {
   if (reserves === '5+')  adj_pn -= 0.50;
 
   // Family support (all incl. smrt)
-  const famMod = family === 'ano' ? -0.05 : 0.00;
+  const famMod = 0;
 
   // Final amounts
   const finalInv   = Math.round(base.invalidita  * (1 + adj_inv   + famMod));
@@ -966,12 +971,12 @@ function calculate() {
 // PARTNER CALCULATION
 // ============================================================
 function calculatePartner() {
-  const { age, income, loan, children, partner, family } = answers;
+  const { age, income, loan, children, partner } = answers;
   if (!partner || partner === 'ne') return null;
 
   const base = BASE_TABLE[age][income];
   const coeff = COEFF[age];
-  const famMod = family === 'ano' ? -0.05 : 0.00;
+  const famMod = 0;
 
   // Smrt base – same loan/children logic
   let smrtBase = 0;
@@ -1203,8 +1208,7 @@ function renderResults(res, partnerRes, minimal) {
   const partnerCard = document.getElementById('partnerCard');
   if (partnerRes) {
     partnerCard.style.display = 'block';
-    const famMod2 = answers.family === 'ano' ? -0.05 : 0.05;
-    const pDO_base = Math.round(300 * (0.65 + famMod2));
+    const pDO_base = Math.round(300 * 0.65);
     const pDO   = minimal ? Math.round(pDO_base * 0.75) : pDO_base;
     const pPN   = minimal ? Math.round(partnerRes.amounts.pn  * 0.60) : partnerRes.amounts.pn;
     const pTN   = minimal ? Math.round(partnerRes.amounts.trv * 0.80) : partnerRes.amounts.trv;
@@ -1219,7 +1223,7 @@ function renderResults(res, partnerRes, minimal) {
     const partnerScenarios = [
       pSmrt > 0 && {
         icon: '🏠', title: 'Smrt z jakékoliv příčiny',
-        desc: 'zázemí pro celou rodinu',
+        desc: 'zázemí pro rodinu',
         infoKey: 'smrt',
         amount: fmt(Math.ceil((pSmrt) / 10000) * 10000) + ' Kč', note: 'jednorázově'
       },
@@ -1296,12 +1300,34 @@ function renderResults(res, partnerRes, minimal) {
 
   // ---- WHATSAPP PREFILLED MESSAGE ----
   const ageLabels = {'20':'18–29 let','30':'30–39 let','40':'40–49 let','50':'50+ let'};
-  const empLabel = answers.employment === 'osvc' ? 'OSVČ' : 'zaměstnanec';
-  const workLabel = answers.workType === 'manualni' ? 'manuální práce' : 'kancelářská práce';
-  const detiLabel = answers.children === '0' ? 'bez dětí' : answers.children + (answers.children === '1' ? ' dítě' : ' děti');
-  const partnerLabel = answers.partner === 'ne' ? 'bez partnera' : answers.partner === 'pracujici' ? 'pracující partner' : 'partner na rodičovské';
+  const incomeLabels = {'20':'20 000–34 000 Kč','35':'35 000–50 000 Kč','50':'50 000–75 000 Kč','75':'75 000 Kč a více'};
+  const empLabel = answers.employment === 'osvc' ? 'OSVČ' : 'Zaměstnanec';
+  const workLabel = answers.workType === 'manualni' ? 'Manuální práce' : 'Kancelářská práce';
+  const uverLabels = {'zadny':'Žádný úvěr','do1M':'Do 1 000 000 Kč','1-3M':'1–3 mil. Kč','3-5M':'3–5 mil. Kč','5M+':'5 mil. Kč a více'};
+  const rezervyLabels = {'do2':'Do 2 měsíčních příjmů','2-4':'2–4 měsíční příjmy','5+':'5 a více měsíčních příjmů'};
+  const detiLabel = answers.children === '0' ? 'Bez dětí' : answers.children + (answers.children === '1' ? ' dítě' : ' děti');
+  const partnerLabels = {'ne':'Bez partnera','pracujici':'Pracující partner','nezamestnany':'Partner v domácnosti'};
+  const healthLabels = {'ano':'Ano – práce ohrožena','nevim':'Nevím','ne':'Ne – práce neohrožena'};
+  const ucelLabels = {'komplexni':'Komplexní ochrana rodiny','zavazna':'Závažná rizika','bolestne':'Bolestné / pracovní neschopnost'};
 
-  const waText = `Ahoj Danieli, mám zájem o konzultaci k životnímu pojištění. Kalkulačka mi vyšla ${fmtPrice(grandTotal)} Kč/měs. Můj profil: ${ageLabels[answers.age]}, ${empLabel}, ${workLabel}, ${detiLabel}, ${partnerLabel}.`;
+  const waText = `Dobrý den, mám zájem o konzultaci rodinného pojištění.
+
+📊 Kalkulace rodinného pojištění – Finanční Frajer
+💰 Orientační cena: ${fmtPrice(grandTotal)} Kč/měs
+
+Moje odpovědi:
+🎯 Záměr: ${ucelLabels[answers.ucel] || ''}
+👤 Věk: ${ageLabels[answers.age] || ''}
+💵 Příjem: ${incomeLabels[answers.income] || ''}
+💼 Zaměstnání: ${empLabel}
+🔧 Typ práce: ${workLabel}
+🏦 Úvěr: ${uverLabels[answers.loan] || ''}
+💰 Rezervy: ${rezervyLabels[answers.reserves] || ''}
+👨‍👩‍👧 Děti: ${detiLabel}
+👫 Partner: ${partnerLabels[answers.partner] || ''}
+❤️ Zdraví: ${healthLabels[answers.health] || ''}
+
+Prosím o kontakt. Děkuji!`;
   document.getElementById('whatsappBtn').href = 'https://wa.me/420731980199?text=' + encodeURIComponent(waText);
   document.getElementById('whatsappBtn').onclick = () => gaEvent('whatsapp_klik');
 }
@@ -1376,8 +1402,7 @@ function _buildEmailParams(name, email, isMinimalOverride) {
   ].join('');
   let allPartner = '';
   if (partnerRes) {
-    const famMod2 = answers.family === 'ano' ? -0.05 : 0.05;
-    const pDO_base = Math.round(300 * (0.65 + famMod2));
+    const pDO_base = Math.round(300 * 0.65);
     const pDO   = useMinimal ? Math.round(pDO_base * 0.75) : pDO_base;
     const pPN   = useMinimal ? Math.round(partnerRes.amounts.pn   * 0.60) : partnerRes.amounts.pn;
     const pTN   = useMinimal ? Math.round(partnerRes.amounts.trv  * 0.80) : partnerRes.amounts.trv;
@@ -1412,7 +1437,7 @@ function _sendEmailAndFormspree(name, phone, email, onSuccess, onError, isMinima
 <body style="font-family:Arial,sans-serif;background:#f5f5f5;padding:20px;margin:0;">
 <div style="max-width:600px;margin:0 auto;background:#ffffff;border-radius:12px;overflow:hidden;border:1px solid #e0d5c0;">
   <div style="background:#1a1a1a;padding:24px 28px;">
-    <h2 style="color:#c8a84b;margin:0;font-size:22px;">Kalkulace životního pojištění</h2>
+    <h2 style="color:#c8a84b;margin:0;font-size:22px;">Kalkulace rodinného pojištění</h2>
     <p style="color:rgba(255,255,255,0.7);margin:6px 0 0;font-size:14px;">Finanční Frajer – financnifrajer.cz</p>
   </div>
   <div style="padding:24px 28px;">
@@ -1434,13 +1459,14 @@ function _sendEmailAndFormspree(name, phone, email, onSuccess, onError, isMinima
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       reply_to: email,
-      subject: 'Kalkulace životního pojištění – ' + (name || email),
+      subject: 'Kalkulace rodinného pojištění – ' + (name || email),
       html: htmlBody,
       jmeno: name || '(neuvedeno)',
       telefon: phone || '(neuvedeno)',
       cena_mesicne: emailParams.cena_mesicne,
       nastaveni: emailParams.nastaveni,
-      scenare: emailParams.scenare
+      scenare: emailParams.scenare,
+      ucel: ({komplexni:'Komplexní ochrana rodiny', zavazna:'Závažná rizika', bolestne:'Bolestné / pracovní neschopnost'})[answers.ucel] || ''
     })
   })
   .then(r => r.json())
