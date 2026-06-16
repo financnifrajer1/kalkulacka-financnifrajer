@@ -63,7 +63,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
 .logo{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:.03em;}
 .header-note{font-size:13px;color:var(--text-dim);}
 .main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 16px;}
-.main.centered{align-items:center;} #screen-results{align-self:flex-start;}
+.main.centered{align-items:center;}
 @media(max-width:600px){#screen-intro{text-align:center;}#screen-intro .intro-features{align-items:center;}#screen-intro .intro-sub{margin-left:auto;margin-right:auto;}}
 
 /* PROGRESS */
@@ -159,7 +159,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
 @media(max-width:480px){.form-row{grid-template-columns:1fr;}}
 .form-group{display:flex;flex-direction:column;gap:6px;}
 .form-group label{font-size:13px;color:var(--text-dim);font-weight:500;}
-.form-group input{background:#f7f5f0;border:1.5px solid rgba(184,149,46,0.30);border-radius:10px;padding:12px 16px;font-size:15px;color:#1a1a1a;font-family:'Inter',sans-serif;transition:border-color .2s;outline:none;}
+.form-group input{background:#f7f5f0;border:1.5px solid rgba(184,149,46,0.30);border-radius:10px;padding:12px 16px;font-size:16px;color:#1a1a1a;font-family:'Inter',sans-serif;transition:border-color .2s;outline:none;}
 .form-group input:focus{border-color:var(--gold);}
 .form-group input::placeholder{color:rgba(0,0,0,0.30);}
 .send-btn{margin-top:16px;}
@@ -224,6 +224,23 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
 .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;color:var(--text-dim);cursor:pointer;font-size:20px;line-height:1;padding:4px;}
 .modal-title{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:var(--white);margin-bottom:6px;}
 .modal-sub{font-size:14px;color:var(--text-dim);margin-bottom:24px;line-height:1.6;}
+
+@media(max-width:480px){
+  .header{padding:14px 16px;}
+  .main{padding:16px 12px;}
+  .option{padding:14px 14px;}
+  .option-label{font-size:15px;}
+  .nav{gap:8px;}
+  .back-btn{padding:10px 16px;font-size:14px;}
+  .btn-gold{padding:14px 20px;font-size:15px;}
+  .breakdown{padding:16px;}
+  .contact-card{padding:20px 16px;}
+  .modal-box{padding:24px 18px;margin:8px;}
+  .results-title{font-size:22px;}
+  .total-price{font-size:48px;}
+  .footer{padding:14px 16px;flex-direction:column;gap:8px;text-align:center;}
+  .form-row{grid-template-columns:1fr;}
+}
 </style>
 </head>
 <body>
@@ -524,7 +541,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
 
     <!-- RESULTS -->
     <div class="screen" id="screen-results" style="max-width:700px;">
-      <div class="results-header">
+      <div class="results-header" style="text-align:center;">
         <div class="q-step">Váš výsledek</div>
         <h2 class="results-title">Orientační rodinná pojistná ochrana</h2>
         <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:20px 0 4px;">
@@ -539,6 +556,9 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
             </div>
           </div>
           <div id="mesicneLabel" style="font-size:15px;color:var(--text-dim);display:none;">měsíčně orientačně</div>
+        </div>
+        <div class="disclaimer" style="margin-top:16px;text-align:left;">
+          <strong>Upozornění:</strong> Tato kalkulačka má orientační charakter a nevychází z konkrétní pojistné smlouvy. Skutečná cena závisí na zdravotním stavu, výběru pojišťovny a dalších faktorech. Výsledek slouží pouze pro ilustraci možného rozsahu pojistné ochrany.
         </div>
 
       </div>
@@ -602,9 +622,6 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
         </div>
       </div>
 
-      <div class="disclaimer">
-        <strong>Upozornění:</strong> Tato kalkulačka má orientační charakter a nevychází z konkrétní pojistné smlouvy. Skutečná cena závisí na zdravotním stavu, výběru pojišťovny a dalších faktorech. Výsledek slouží pouze pro ilustraci možného rozsahu pojistné ochrany.
-      </div>
     </div>
 
   </main>
@@ -709,8 +726,8 @@ function showScreen(id) {
   updateDots(id);
   // Otázky centrovat vertikálně, výsledky ne (kvůli scrollu)
   const main = document.querySelector('.main');
-  if (id === 'results') main.classList.remove('centered');
-  else main.classList.add('centered');
+  if (id === 'results') { main.classList.remove('centered'); main.style.alignItems = 'flex-start'; }
+  else { main.classList.add('centered'); main.style.alignItems = ''; }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
