@@ -854,6 +854,7 @@ function next(step) {
   const key = getKeyForStep(step);
   if (!answers[key]) return;
   if (step < TOTAL_STEPS) showScreen(step + 1);
+  else showResults();
 }
 
 function getKeyForStep(step) {
@@ -1022,32 +1023,7 @@ let _lastRes = null, _lastPartnerRes = null, _isMinimal = false;
 
 function toggleMinimal() {
   _isMinimal = !_isMinimal;
-  const btn = document.getElementById('toggleKryti');
-  btn.textContent = _isMinimal ? '📈 Zobrazit optimální nastavení' : '📉 Zobrazit minimální krytí';
-  btn.style.borderColor = _isMinimal ? 'var(--gold)' : 'var(--border)';
-  btn.style.color = _isMinimal ? 'var(--gold-light)' : 'var(--text-dim)';
   renderResults(_lastRes, _lastPartnerRes, _isMinimal);
-  // Zobraz banner jen pokud jsou ceny odblurované a přepnul na minimální
-  const banner = document.getElementById('minimalBanner');
-  const revealed = document.getElementById('screen-results').classList.contains('prices-revealed');
-  if (banner) banner.style.display = (revealed && _isMinimal) ? 'block' : 'none';
-}
-
-function sendMinimalVariant() {
-  // Použijeme email z formuláře (už byl odeslán)
-  const email = document.getElementById('formEmail').value.trim() || document.getElementById('modalEmail').value.trim();
-  if (!email) { alert('Email nenalezen – zkuste znovu vyplnit formulář.'); return; }
-  const btn = document.getElementById('minimalBannerBtn');
-  btn.textContent = 'Odesílám...';
-  btn.setAttribute('disabled', '');
-  _sendEmailAndFormspree('', '', email, () => {
-    btn.style.display = 'none';
-    document.getElementById('minimalBannerSuccess').style.display = 'block';
-  }, () => {
-    btn.textContent = '📩 Poslat minimální variantu';
-    btn.removeAttribute('disabled');
-    alert('Chyba při odesílání.');
-  }, true); // true = force minimal
 }
 
 
@@ -1068,10 +1044,6 @@ function showResults() {
   _lastRes = calculate();
   _lastPartnerRes = calculatePartner();
   _isMinimal = false;
-  const btn = document.getElementById('toggleKryti');
-  btn.textContent = '📉 Zobrazit minimální krytí';
-  btn.style.borderColor = 'var(--border)';
-  btn.style.color = 'var(--text-dim)';
   gaEvent('vysledky_zobrazeny', { value: Math.round(_lastRes.total) });
   renderResults(_lastRes, _lastPartnerRes, false);
   showScreen('results');
