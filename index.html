@@ -62,8 +62,8 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
 .header{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;border-bottom:1px solid rgba(184,149,46,0.25);background:#ffffff;}
 .logo{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:.03em;}
 .header-note{font-size:13px;color:var(--text-dim);}
-.main{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:32px 16px;}
-.main.centered{align-items:center;}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 16px;}
+.main.centered{align-items:center;} #screen-results{align-self:flex-start;}
 @media(max-width:600px){#screen-intro{text-align:center;}#screen-intro .intro-features{align-items:center;}#screen-intro .intro-sub{margin-left:auto;margin-right:auto;}}
 
 /* PROGRESS */
@@ -189,7 +189,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
 .step-dot.active{width:20px;border-radius:3px;background:var(--gold);}
 
 /* DISCLAIMER */
-.disclaimer{font-size:12px;color:rgba(0,0,0,0.45);margin-top:24px;line-height:1.7;padding:14px 16px;background:#f0ece0;border-radius:10px;border-left:2px solid var(--gold);}
+.disclaimer{display:none;font-size:12px;color:rgba(0,0,0,0.45);margin-top:24px;line-height:1.7;padding:14px 16px;background:#f0ece0;border-radius:10px;border-left:2px solid var(--gold);} .screen-results-active .disclaimer{display:block;}
 
 /* --- BLUR / LOCK --- */
 .price-lock-wrap{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:6px;}
@@ -235,12 +235,19 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
     <div class="header-note" id="headerNote">Kalkulačka rodinného pojištění</div>
   </header>
 
-  <main class="main">
+  <main class="main centered">
 
     <!-- INTRO -->
 
     <!-- Q1: ÚČEL POJIŠTĚNÍ (informativní) -->
-    <div class="screen" id="screen-1">
+    <div class="screen active" id="screen-1">
+      <div style="text-align:center;margin-bottom:24px;">
+        <div style="font-family:'Inter',sans-serif;font-size:clamp(28px,6vw,42px);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:18px;">Kalkulačka pojištění<br><span style="color:var(--gold);">pro rodinu</span></div>
+        <div style="display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+          <span style="display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(201,168,76,0.35);border-radius:100px;padding:8px 20px;font-size:15px;font-weight:600;color:var(--gold-light);">📋 10 otázek</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(201,168,76,0.35);border-radius:100px;padding:8px 20px;font-size:15px;font-weight:600;color:var(--gold-light);">⏱ do 2 minut</span>
+        </div>
+      </div>
       <div class="step-dots" id="dots-1"></div>
       <div class="q-step">Otázka 1 z 10</div>
       <h2 class="q-title">Na co chcete pojištění primárně použít?</h2>
@@ -264,20 +271,13 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
       <div class="nav">
         <button class="back-btn" onclick="goBack(1)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg> Zpět</button>
-        <button class="btn btn-gold next-btn" onclick="showResults()" disabled id="next-1">Zobrazit výsledek <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
+        <button class="btn btn-gold next-btn" onclick="next(1)" disabled id="next-1">Další <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
       </div>
     </div>
 
     <!-- Q2: VĚK -->
-    <div class="screen active" id="screen-2">
-      <div style="text-align:center;margin-bottom:24px;">
-        <div style="font-family:'Inter',sans-serif;font-size:clamp(28px,6vw,42px);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:18px;">Kalkulačka pojištění<br><span style="color:var(--gold);">pro rodinu</span></div>
-        <div style="display:inline-flex;gap:10px;flex-wrap:wrap;justify-content:center;">
-          <span style="display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(201,168,76,0.35);border-radius:100px;padding:8px 20px;font-size:15px;font-weight:600;color:var(--gold-light);">📋 10 otázek</span>
-          <span style="display:inline-flex;align-items:center;gap:6px;background:var(--gold-pale);border:1px solid rgba(201,168,76,0.35);border-radius:100px;padding:8px 20px;font-size:15px;font-weight:600;color:var(--gold-light);">⏱ do 2 minut</span>
-        </div>
-      </div>
-      <div class="step-dots" id="dots-2"></div>
+    <div class="screen" id="screen-2">
+<div class="step-dots" id="dots-2"></div>
       <h2 class="q-title">Kolik je let hlavnímu živiteli rodiny?</h2>
       <p class="q-sub">Nastavíme ochranu na míru vaší rodině – v konkrétních číslech.</p>
       <div class="options cols-2">
@@ -518,7 +518,7 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
       </div>
       <div class="nav">
         <button class="back-btn" onclick="goBack(10)"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12,19 5,12 12,5"/></svg> Zpět</button>
-        <button class="btn btn-gold next-btn" onclick="next(10)" disabled id="next-10">Další <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
+        <button class="btn btn-gold next-btn" onclick="showResults()" disabled id="next-10">Zobrazit výsledek <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></svg></button>
       </div>
     </div>
 
@@ -540,31 +540,13 @@ html,body{height:100%;font-family:'Inter',sans-serif;background:#f7f5f0;color:#1
           </div>
           <div id="mesicneLabel" style="font-size:15px;color:var(--text-dim);display:none;">měsíčně orientačně</div>
         </div>
-        <div style="margin:28px 0 4px;">
-          <button id="toggleKryti" onclick="toggleMinimal()" style="background:none;border:1.5px solid var(--border);color:var(--text-dim);font-size:16px;padding:12px 24px;border-radius:100px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;white-space:nowrap;">
-            📉 Zobrazit minimální krytí
-          </button>
-        </div>
-        <!-- Banner: pošli minimální variantu na email (zobrazí se po reveal + kliknutí na minimální) -->
-        <div id="minimalBanner" style="display:none;margin:12px 0 0;background:linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.05));border:1px solid rgba(201,168,76,0.35);border-radius:14px;padding:16px 20px;">
-          <div style="font-size:15px;font-weight:700;color:var(--gold-light);margin-bottom:4px;">💡 Chcete i úspornější variantu na email?</div>
-          <div style="font-size:13px;color:var(--text-dim);margin-bottom:14px;">Pošleme vám minimální krytí zvlášť – jednoduché srovnání obou variant přímo v inboxu.</div>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
-            <button onclick="sendMinimalVariant()" id="minimalBannerBtn" style="background:var(--gold);color:#0a1223;font-size:14px;font-weight:700;padding:10px 20px;border-radius:100px;border:none;cursor:pointer;font-family:'Inter',sans-serif;">
-              📩 Poslat minimální variantu
-            </button>
-            <button onclick="document.getElementById('minimalBanner').style.display='none'" style="background:none;border:none;color:var(--text-dim);font-size:13px;cursor:pointer;font-family:'Inter',sans-serif;">
-              Ne, děkuji
-            </button>
-          </div>
-          <div id="minimalBannerSuccess" style="display:none;font-size:14px;color:var(--gold-light);margin-top:8px;">✅ Odesláno! Máte obě varianty v emailu. Zkontrolujte i spam. 📩</div>
-        </div>
+
       </div>
 
       <div class="breakdown" id="highlights"></div>
 
       <div id="partnerCardWrap">
-        <div id="minimalToggleAbovePartner" style="display:none;text-align:center;margin:8px 0 0;"></div>
+        <div id="minimalToggleAbovePartner" style="display:none;" style="display:none;text-align:center;margin:8px 0 0;"></div>
         <div class="breakdown" id="partnerCard" style="display:none;padding:22px;"></div>
       </div>
 
@@ -763,6 +745,7 @@ function restartQuiz() {
   document.getElementById('contactForm').style.display = 'block';
   document.getElementById('successMsg').style.display = 'none';
   showScreen(1);
+  document.querySelector('.main').classList.remove('screen-results-active');
 }
 
 function toggleHint(btn) {
@@ -1092,6 +1075,7 @@ function showResults() {
   gaEvent('vysledky_zobrazeny', { value: Math.round(_lastRes.total) });
   renderResults(_lastRes, _lastPartnerRes, false);
   showScreen('results');
+  document.querySelector('.main').classList.add('screen-results-active');
 }
 
 function renderResults(res, partnerRes, minimal) {
