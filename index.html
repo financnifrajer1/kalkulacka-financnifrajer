@@ -914,7 +914,7 @@ function calculate() {
   if (workType === 'manualni') { adj_trvale += 0.42; adj_pn += 0.08; }
 
   // Health → job impact
-  if (health === 'ano')  { adj_inv += 0.10; adj_pn += 0.10; adj_trvale += 0.10; adj_onem += 0.10; }
+  if (health === 'ano')  { adj_inv += 0.05; adj_pn += 0.05; adj_trvale += 0.05; adj_onem += 0.05; }
   if (health === 'ne')   { adj_inv -= 0.20; adj_pn -= 0.20; adj_trvale -= 0.20; adj_onem -= 0.20; }
 
   // Reserves → PN reduction
@@ -922,7 +922,7 @@ function calculate() {
   if (reserves === '5+')  adj_pn -= 0.50;
 
   // Family support (all incl. smrt)
-  const famMod = family === 'ano' ? -0.05 : 0.05;
+  const famMod = family === 'ano' ? -0.05 : 0.00;
 
   // Final amounts
   const finalInv   = Math.round(base.invalidita  * (1 + adj_inv   + famMod));
@@ -971,7 +971,7 @@ function calculatePartner() {
 
   const base = BASE_TABLE[age][income];
   const coeff = COEFF[age];
-  const famMod = family === 'ano' ? -0.05 : 0.05;
+  const famMod = family === 'ano' ? -0.05 : 0.00;
 
   // Smrt base – same loan/children logic
   let smrtBase = 0;
