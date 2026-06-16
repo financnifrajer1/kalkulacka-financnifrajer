@@ -10,7 +10,7 @@ function buildEmailHtml(payload, forClient) {
   const intro = forClient ? `
     <p style="color:#1a1a1a;font-size:15px;margin:0 0 16px;">
       Dobrý den, <strong>${payload.jmeno || ''}</strong>,<br><br>
-      děkuji za vyplnění kalkulačky životního pojištění. Níže najdete orientační výsledky Vaší kalkulace.
+      děkuji za vyplnění kalkulačky rodinného pojištění. Níže najdete orientační výsledky Vaší kalkulace.
       Rád se s Vámi spojím a probereme podrobnosti osobně.
     </p>` : '';
 
@@ -32,6 +32,7 @@ function buildEmailHtml(payload, forClient) {
   <div style="padding:24px 28px;">
     ${intro}
     <p style="color:#1a1a1a;font-size:15px;margin:0 0 6px;"><strong>Jméno:</strong> ${payload.jmeno || ''}</p>
+    ${payload.ucel ? `<p style="color:#1a1a1a;font-size:15px;margin:0 0 6px;"><strong>Záměr pojištění:</strong> ${payload.ucel}</p>` : ''}
     <p style="color:#1a1a1a;font-size:15px;margin:0 0 6px;"><strong>Telefon:</strong> ${payload.telefon || '(neuvedeno)'}</p>
     <p style="color:#1a1a1a;font-size:15px;margin:0 0 20px;"><strong>Orientační cena:</strong> <span style="color:#b8952e;font-weight:700;">${payload.cena_mesicne || ''}</span></p>
     ${payload.nastaveni || ''}
@@ -41,6 +42,18 @@ function buildEmailHtml(payload, forClient) {
 </div>
 </body>
 </html>`;
+}
+
+function buildWhatsAppMessage(payload) {
+  const ucel = payload.ucel ? `\nZáměr: ${payload.ucel}` : '';
+  return `Dobrý den, jmenuji se ${payload.jmeno || '(neuvedeno)'} a mám zájem o konzultaci rodinného pojištění.
+
+📊 Kalkulace rodinného pojištění – Finanční Frajer
+👤 Jméno: ${payload.jmeno || '(neuvedeno)'}
+📞 Telefon: ${payload.telefon || '(neuvedeno)'}${ucel}
+💰 Orientační cena: ${payload.cena_mesicne || ''}
+
+Prosím o kontakt. Děkuji!`;
 }
 
 exports.handler = async function(event) {
@@ -71,7 +84,7 @@ exports.handler = async function(event) {
       body: JSON.stringify({
         from: 'Daniel Ševčík – Finanční Frajer <kalkulacka@financnifrajer.cz>',
         to: [payload.reply_to],
-        subject: 'Vaše kalkulace životního pojištění – Finanční Frajer',
+        subject: 'Vaše kalkulace rodinného pojištění – Finanční Frajer',
         html: buildEmailHtml(payload, true)
       })
     }) : Promise.resolve();
@@ -81,7 +94,7 @@ exports.handler = async function(event) {
     return {
       statusCode: 200,
       headers: { 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify({ ok: true })
+      body: JSON.stringify({ ok: true, whatsapp_message: buildWhatsAppMessage(payload) })
     };
   } catch (err) {
     return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
