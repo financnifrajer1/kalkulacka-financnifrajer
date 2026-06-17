@@ -34,7 +34,24 @@ function buildEmailHtml(payload, forClient) {
     <p style="color:#1a1a1a;font-size:15px;margin:0 0 6px;"><strong>Jméno:</strong> ${payload.jmeno || ''}</p>
     ${payload.ucel ? `<p style="color:#1a1a1a;font-size:15px;margin:0 0 6px;"><strong>Záměr pojištění:</strong> ${payload.ucel}</p>` : ''}
     <p style="color:#1a1a1a;font-size:15px;margin:0 0 6px;"><strong>Telefon:</strong> ${payload.telefon || '(neuvedeno)'}</p>
+    <p style="color:#1a1a1a;font-size:15px;margin:0 0 6px;"><strong>Email:</strong> ${payload.reply_to || '(neuvedeno)'}</p>
     <p style="color:#1a1a1a;font-size:15px;margin:0 0 20px;"><strong>Orientační cena:</strong> <span style="color:#b8952e;font-weight:700;">${payload.cena_mesicne || ''}</span></p>
+    ${payload.odpovedi ? `
+    <div style="background:#f7f5f0;border-radius:8px;padding:12px 16px;margin:0 0 20px;">
+      <p style="font-size:12px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.07em;margin:0 0 8px;">Odpovědi na otázky</p>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;">
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">🎯 Záměr</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.vek ? payload.ucel : ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">👤 Věk</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.vek || ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">💵 Příjem</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.prijem || ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">💼 Zaměstnání</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.zamestnani || ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">🔧 Typ práce</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.prace || ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">🏦 Úvěr</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.uver || ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">💰 Rezervy</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.rezervy || ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">👨‍👩‍👧 Děti</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.deti || ''}</td></tr>
+        <tr style="border-bottom:1px solid #e0d8cc;"><td style="padding:4px 0;color:#666;">👫 Partner</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.partner || ''}</td></tr>
+        <tr><td style="padding:4px 0;color:#666;">❤️ Zdraví</td><td style="padding:4px 0;text-align:right;color:#1a1a1a;">${payload.odpovedi.zdravi || ''}</td></tr>
+      </table>
+    </div>` : ''}
     ${payload.nastaveni || ''}
     ${payload.scenare || ''}
   </div>
